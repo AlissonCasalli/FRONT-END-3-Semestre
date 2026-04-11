@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lançamento de Produto</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!--  Botão Voltar -->
+  <a href="../exerc3/index.html" class="btn-voltar">← Voltar ao Portfólio</a>
+
+  <!-- HERO  -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="badge pulse">🚀 Em breve</span>
+      <h1 class="hero-title">
+        O futuro do<br/>
+        <span class="gradient-text">Sound Design</span><br/>
+        está chegando
+      </h1>
+      <p class="hero-sub">
+        Apresentamos o <strong>SoundSphere X</strong> — o fone de ouvido
+        mais avançado já criado. Áudio espacial, cancelamento de ruído
+        quântico e 72h de bateria.
+      </p>
+
+      <!-- obrigatoria <time> com countdown -->
+      <div class="countdown-wrapper">
+        <p class="countdown-label">⏱️ Lançamento em:</p>
+        <div class="countdown" id="countdown">
+          <!-- obrigatoria <time> -->
+          <time class="time-block" id="bloco-dias" datetime="">
+            <span class="time-num" id="dias">00</span>
+            <small>dias</small>
+          </time>
+          <span class="sep">:</span>
+          <time class="time-block" id="bloco-horas" datetime="">
+            <span class="time-num" id="horas">00</span>
+            <small>horas</small>
+          </time>
+          <span class="sep">:</span>
+          <time class="time-block" id="bloco-min" datetime="">
+            <span class="time-num" id="minutos">00</span>
+            <small>min</small>
+          </time>
+          <span class="sep">:</span>
+          <time class="time-block" id="bloco-seg" datetime="">
+            <span class="time-num" id="segundos">00</span>
+            <small>seg</small>
+          </time>
+        </div>
+      </div>
+
+      <a href="#pre-venda" class="btn-cta">Garantir minha unidade →</a>
+    </div>
+
+    <!-- Imagem do produto -->
+    <div class="hero-image">
+      <div class="product-glow"></div>
+      <img
+        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+        alt="SoundSphere X"
+        class="product-img"
+      />
+    </div>
+  </section>
+
+  <!--  FEATURES  -->
+  <section class="features">
+    <div class="section-header">
+      <span class="badge">✦ Tecnologia</span>
+      <h2>Recursos <span class="gradient-text">Revolucionários</span></h2>
+      <p>Cada detalhe foi pensado para redefinir sua experiência sonora.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎵</div>
+        <h3>Áudio Espacial 360°</h3>
+        <p>Processamento em tempo real que coloca você dentro da música com precisão cirúrgica.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔇</div>
+        <h3>ANC Quântico</h3>
+        <p>Cancelamento de ruído adaptativo que elimina até 99,8% dos sons externos.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>72h de Bateria</h3>
+        <p>Carregamento rápido de 10 minutos para 8 horas de uso. Nunca fique sem música.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌊</div>
+        <h3>IPX8 Resistente</h3>
+        <p>Resistente a água, suor e poeira. Perfeito para qualquer aventura.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>IA Adaptativa</h3>
+        <p>Aprende seu estilo de escuta e ajusta automaticamente o equalizador para você.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎙️</div>
+        <h3>Microfone Array</h3>
+        <p>6 microfones com beamforming para chamadas cristalinas em qualquer ambiente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--  GALERIA  -->
+  <section class="gallery">
+    <div class="section-header">
+      <span class="badge">✦ Design</span>
+      <h2>Elegância em cada <span class="gradient-text">ângulo</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=600&q=80" alt="Produto 1" />
+      <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?auto=format&fit=crop&w=600&q=80" alt="Produto 2" />
+      <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=600&q=80" alt="Produto 3" />
+      <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=600&q=80" alt="Produto 4" />
+    </div>
+  </section>
+
+  <!-- PRÉ-VENDA -->
+  <section class="pre-venda" id="pre-venda">
+    <div class="pre-venda-wrapper">
+
+      <div class="pre-venda-info">
+        <span class="badge">🎁 Oferta exclusiva</span>
+        <h2>Garanta com <span class="gradient-text">20% off</span></h2>
+        <p>Seja um dos primeiros a ter o SoundSphere X com desconto exclusivo de pré-venda.</p>
+
+        <ul class="benefits">
+          <li>✅ Frete grátis para todo o Brasil</li>
+          <li>✅ Garantia estendida de 3 anos</li>
+          <li>✅ Entrega prioritária no lançamento</li>
+          <li>✅ Suporte VIP 24/7</li>
+        </ul>
+
+        <div class="price-box">
+          <span class="price-label">Pré-venda exclusiva</span>
+          <div class="price-row">
+            <del class="price-old">R$ 1.299,00</del>
+            <span class="price-new">R$ 1.039,20</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="pre-venda-form" action="#" method="POST">
+        <h3>Reservar minha unidade</h3>
+
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" />
+        </div>
+
+        <div class="form-group">
+          <label for="cor">Escolha a cor</label>
+          <select id="cor" name="cor">
+            <option value="preto">Midnight Black</option>
+            <option value="branco">Pearl White</option>
+            <option value="roxo">Deep Purple</option>
+            <option value="azul">Ocean Blue</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit">🚀 Garantir com 20% off</button>
+        <p class="form-note">🔒 Seus dados estão protegidos. Sem cobranças agora.</p>
+      </form>
+
+    </div>
+  </section>
+
+  <script>
+    // Data de lançamento 60 dias a partir de hoje
+    const lancamento = new Date();
+    lancamento.setDate(lancamento.getDate() + 60);
+
+    // Atualiza o atributo datetime das tags <time>
+    const iso = lancamento.toISOString();
+    document.querySelectorAll('time.time-block').forEach(t => t.setAttribute('datetime', iso));
+
+    function atualizarCountdown() {
+      const agora = new Date();
+      const diff = lancamento - agora;
+
+      if (diff <= 0) {
+        document.getElementById('countdown').innerHTML = '<p class="lancou">🎉 Produto lançado!</p>';
+        return;
+      }
+
+      const dias    = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const segs    = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('dias').textContent     = String(dias).padStart(2, '0');
+      document.getElementById('horas').textContent    = String(horas).padStart(2, '0');
+      document.getElementById('minutos').textContent  = String(minutos).padStart(2, '0');
+      document.getElementById('segundos').textContent = String(segs).padStart(2, '0');
+
+      // Pisca o bloco de segundos a cada atualização
+      const seg = document.getElementById('bloco-seg');
+      seg.classList.remove('blink');
+      void seg.offsetWidth; // reflow para reiniciar animação
+      seg.classList.add('blink');
+    }
+
+    atualizarCountdown();
+    setInterval(atualizarCountdown, 1000);
+  </script>
+
+</body>
+</html>

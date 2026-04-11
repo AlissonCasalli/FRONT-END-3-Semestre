@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Contato</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <a href="../exerc3/index.html" class="btn-voltar">← Voltar ao Portfólio</a>
+
+  <section class="hero">
+
+    <div class="container">
+
+      <!-- Lado esquerdo -->
+      <div class="info">
+        <span class="badge">✦ Fale comigo</span>
+        <h1>Entre em <span class="gradient-text">Contato</span></h1>
+        <p>Tem alguma dúvida, sugestão ou proposta? Preencha o formulário e responderei o mais breve possível.</p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="icon">📧</div>
+            <div>
+              <strong>E-mail</strong>
+              <span>contatoalissoncasalli@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">📱</div>
+            <div>
+              <strong>Telefone</strong>
+              <span>(44) 99755-5222</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <div>
+              <strong>Localização</strong>
+              <span>Nova Esperança, Paraná, Brasil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <form> -->
+      <form class="form" action="#" method="POST">
+        <h2>Envie uma mensagem</h2>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="assunto">Assunto</label>
+          <input type="text" id="assunto" name="assunto" placeholder="Qual o assunto?" required />
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar mensagem →</button>
+      </form>
+
+    </div>
+  </section>
+
+</body>
+</html>

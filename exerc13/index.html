@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Promoções</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!--  Botão Voltar -->
+  <a href="../exerc3/index.html" class="btn-voltar">← Voltar ao Portfólio</a>
+
+  <section class="hero">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="header">
+        <span class="badge">🔥 Ofertas Imperdíveis</span>
+        <h1>Promoções <span class="gradient-text">Especiais</span></h1>
+        <p>Aproveite nossas ofertas por tempo limitado com os melhores preços!</p>
+
+        <!-- Contador regressivo -->
+        <div class="countdown">
+          <span class="countdown-label">⏱️ Oferta termina em:</span>
+          <div class="countdown-timer">
+            <div class="time-block"><span id="horas">08</span><small>horas</small></div>
+            <div class="sep">:</div>
+            <div class="time-block"><span id="minutos">45</span><small>min</small></div>
+            <div class="time-block"><span id="segundos">00</span><small>seg</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de produtos -->
+      <div class="products-grid">
+
+        <!-- Card 1 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+              alt="Relógio Premium"
+              class="product-img"
+            />
+            <span class="discount-badge">-40%</span>
+          </div>
+          <div class="product-body">
+            <span class="category">Acessórios</span>
+            <h2 class="product-title">Relógio Premium</h2>
+            <p class="product-desc">Design minimalista com pulseira de couro genuíno e resistência à água.</p>
+            <div class="price-wrapper">
+              <!-- ✅ TAG OBRIGATÓRIA: <del> -->
+              <del class="price-original">R$ 599,90</del>
+              <span class="price-atual">R$ 359,90</span>
+            </div>
+            <button class="btn-comprar">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card featured">
+          <div class="product-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+              alt="Fone de Ouvido"
+              class="product-img"
+            />
+            <span class="discount-badge">-55%</span>
+            <span class="hot-badge">🔥 Mais vendido</span>
+          </div>
+          <div class="product-body">
+            <span class="category">Eletrônicos</span>
+            <h2 class="product-title">Fone Wireless Pro</h2>
+            <p class="product-desc">Som surround 360°, cancelamento de ruído ativo e 30h de bateria.</p>
+            <div class="price-wrapper">
+              <!-- ✅ TAG OBRIGATÓRIA: <del> -->
+              <del class="price-original">R$ 899,00</del>
+              <span class="price-atual">R$ 404,55</span>
+            </div>
+            <button class="btn-comprar">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80"
+              alt="Tênis Esportivo"
+              class="product-img"
+            />
+            <span class="discount-badge">-30%</span>
+          </div>
+          <div class="product-body">
+            <span class="category">Esportes</span>
+            <h2 class="product-title">Tênis Esportivo</h2>
+            <p class="product-desc">Amortecimento avançado e solado antiderrapante para alta performance.</p>
+            <div class="price-wrapper">
+              <!-- ✅ TAG OBRIGATÓRIA: <del> -->
+              <del class="price-original">R$ 429,90</del>
+              <span class="price-atual">R$ 300,93</span>
+            </div>
+            <button class="btn-comprar">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80"
+              alt="Câmera Instantânea"
+              class="product-img"
+            />
+            <span class="discount-badge">-35%</span>
+          </div>
+          <div class="product-body">
+            <span class="category">Fotografia</span>
+            <h2 class="product-title">Câmera Instantânea</h2>
+            <p class="product-desc">Capture e imprima memórias na hora com filtros analógicos exclusivos.</p>
+            <div class="price-wrapper">
+              <!-- ✅ TAG OBRIGATÓRIA: <del> -->
+              <del class="price-original">R$ 349,00</del>
+              <span class="price-atual">R$ 226,85</span>
+            </div>
+            <button class="btn-comprar">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img
+              src="https://miro.medium.com/1*gHKM3GHn4sH-Wz3KgirUAQ.jpeg"
+              alt="Livro Bom"
+              class="product-img"
+            />
+            <span class="discount-badge">-50%</span>
+          </div>
+          <div class="product-body">
+            <span class="category">Livros</span>
+            <h2 class="product-title">Livro Legal Demaize</h2>
+            <p class="product-desc">Guia completo, sem páginas faltando.</p>
+            <div class="price-wrapper">
+              <!-- ✅ TAG OBRIGATÓRIA: <del> -->
+              <del class="price-original">R$ 120,00</del>
+              <span class="price-atual">R$ 60,00</span>
+            </div>
+            <button class="btn-comprar">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img
+              src="https://www.saldaodainformatica.com.br/img/p/1/1/9/2/5/11925-medium_default.webp"
+              alt="Notebook Mais Potente do Mundo"
+              class="product-img"
+            />
+            <span class="discount-badge">-25%</span>
+          </div>
+          <div class="product-body">
+            <span class="category">Informática</span>
+            <h2 class="product-title">Notebook Potente 2026</h2>
+            <p class="product-desc">Processador de última geração, 2GB RAM e HD 64GB ultra rápido.</p>
+            <div class="price-wrapper">
+              <!-- ✅ TAG OBRIGATÓRIA: <del> -->
+              <del class="price-original">R$ 4.299,00</del>
+              <span class="price-atual">R$ 3.224,25</span>
+            </div>
+            <button class="btn-comprar">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Contador regressivo
+    let total = 8 * 3600 + 45 * 60;
+
+    function atualizarTimer() {
+      if (total <= 0) return;
+      total--;
+      const h = String(Math.floor(total / 3600)).padStart(2, '0');
+      const m = String(Math.floor((total % 3600) / 60)).padStart(2, '0');
+      const s = String(total % 60).padStart(2, '0');
+      document.getElementById('horas').textContent = h;
+      document.getElementById('minutos').textContent = m;
+      document.getElementById('segundos').textContent = s;
+    }
+
+    setInterval(atualizarTimer, 1000);
+  </script>
+
+</body>
+</html>

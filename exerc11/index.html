@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa do Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!--  Botão Voltar -->
+  <a href="../exerc3/index.html" class="btn-voltar">← Voltar ao Portfólio</a>
+
+  <section class="hero">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="header">
+        <span class="badge">✦ Navegação</span>
+        <h1>Mapa do <span class="gradient-text">Site</span></h1>
+        <p>Veja a estrutura completa e organização de todas as páginas do site.</p>
+      </div>
+
+      <!-- Árvore do mapa -->
+      <div class="sitemap-wrapper">
+
+        <!-- Raiz -->
+        <div class="tree-root">
+          <span class="root-icon">🌐</span>
+          <span class="root-label">Meu Portfólio</span>
+        </div>
+
+        <!-- <ul> obrigatorio -->
+        <ul class="tree">
+
+          <li class="tree-item">
+            <span class="tree-icon">🏠</span>
+            <a href="#" class="tree-link">Início</a>
+            <!-- ✅ TAG OBRIGATÓRIA: <ul> aninhada -->
+            <ul class="tree tree--nested">
+              <li class="tree-item">
+                <span class="tree-icon">👤</span>
+                <a href="#" class="tree-link">Sobre Mim</a>
+              </li>
+              <li class="tree-item">
+                <span class="tree-icon">⭐</span>
+                <a href="#" class="tree-link">Habilidades</a>
+              </li>
+              <li class="tree-item">
+                <span class="tree-icon">📞</span>
+                <a href="#" class="tree-link">Contato</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="tree-item">
+            <span class="tree-icon">💼</span>
+            <a href="#" class="tree-link">Portfólio</a>
+            <ul class="tree tree--nested">
+              <li class="tree-item">
+                <span class="tree-icon">🎨</span>
+                <a href="#" class="tree-link">Projetos Web</a>
+                <ul class="tree tree--nested">
+                  <li class="tree-item">
+                    <span class="tree-icon">📄</span>
+                    <a href="../exerc1/index.html" class="tree-link">Página de Introdução</a>
+                  </li>
+                  <li class="tree-item">
+                    <span class="tree-icon">📋</span>
+                    <a href="../exerc5/index.html" class="tree-link">Página de Contato</a>
+                  </li>
+                  <li class="tree-item">
+                    <span class="tree-icon">🔐</span>
+                    <a href="../exerc7/index.html" class="tree-link">Página de Login</a>
+                  </li>
+                  <li class="tree-item">
+                    <span class="tree-icon">✅</span>
+                    <a href="../exerc9/index.html" class="tree-link">Lista de Tarefas</a>
+                  </li>
+                  <li class="tree-item">
+                    <span class="tree-icon">🗺️</span>
+                    <a href="../exerc11/index.html" class="tree-link tree-link--active">Mapa do Site</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="tree-item">
+                <span class="tree-icon">📱</span>
+                <a href="#" class="tree-link">Projetos Mobile</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="tree-item">
+            <span class="tree-icon">📝</span>
+            <a href="#" class="tree-link">Blog</a>
+            <ul class="tree tree--nested">
+              <li class="tree-item">
+                <span class="tree-icon">🏷️</span>
+                <a href="#" class="tree-link">Categorias</a>
+              </li>
+              <li class="tree-item">
+                <span class="tree-icon">🔖</span>
+                <a href="#" class="tree-link">Artigos Recentes</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="tree-item">
+            <span class="tree-icon">⚙️</span>
+            <a href="#" class="tree-link">Configurações</a>
+            <ul class="tree tree--nested">
+              <li class="tree-item">
+                <span class="tree-icon">🔒</span>
+                <a href="#" class="tree-link">Privacidade</a>
+              </li>
+              <li class="tree-item">
+                <span class="tree-icon">📜</span>
+                <a href="#" class="tree-link">Termos de Uso</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- Legenda -->
+      <div class="legenda">
+        <div class="legenda-item">
+          <span class="dot dot--purple"></span>
+          <span>Página principal</span>
+        </div>
+        <div class="legenda-item">
+          <span class="dot dot--blue"></span>
+          <span>Subpágina</span>
+        </div>
+        <div class="legenda-item">
+          <span class="dot dot--active"></span>
+          <span>Página atual</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

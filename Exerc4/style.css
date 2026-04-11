@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --purple: #a78bfa;
+    --blue: #38bdf8;
+    --bg: #080b14;
+    --card: #0e1220;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #e2e8f0;
+    --muted: rgba(255, 255, 255, 0.45);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+/* ── Botão Voltar ── */
+.btn-voltar {
+    position: fixed;
+    top: 1.25rem;
+    left: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.25rem;
+    background: rgba(10, 10, 20, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    z-index: 9999;
+}
+
+.btn-voltar:hover {
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    border-color: transparent;
+    transform: translateX(-3px);
+}
+
+header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.blog-posts {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: circle inside;
+    padding-left: 20px;
+}
+
+.post {
+    background: var(--card);
+    margin: 30px 0;
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.post:hover {
+    border-color: var(--purple);
+    box-shadow: 0 20px 40px rgba(167, 139, 250, 0.15);
+    transform: translateY(-4px);
+}
+
+.post h2 {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.date {
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.post p {
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(167, 139, 250, 0.3);
+}
+
+@media (max-width: 768px) {
+    .blog-posts {
+        list-style: square;
+    }
+
+    .post {
+        padding: 24px;
+        margin: 20px 0;
+    }
+
+    .btn-voltar {
+        top: 0.75rem;
+        left: 0.75rem;
+        font-size: 0.78rem;
+        padding: 0.45rem 1rem;
+    }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Botão Voltar -->
+  <a href="../exerc3/index.html" class="btn-voltar">← Voltar ao Portfólio</a>
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="header">
+        <span class="badge">✦ Organize seu dia</span>
+        <h1>Lista de <span class="gradient-text">Tarefas</span></h1>
+        <p>Adicione, edite e conclua suas tarefas do dia a dia.</p>
+      </div>
+
+      <!-- Campo adicionar tarefa -->
+      <div class="add-task">
+        <!-- <input> obrigatorio -->
+        <input
+          type="text"
+          id="nova-tarefa"
+          placeholder="Digite uma nova tarefa..."
+        />
+        <button class="btn-add" onclick="adicionarTarefa()">+ Adicionar</button>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filtros">
+        <button class="filtro ativo" onclick="filtrar('todas', this)">Todas</button>
+        <button class="filtro" onclick="filtrar('pendentes', this)">Pendentes</button>
+        <button class="filtro" onclick="filtrar('concluidas', this)">Concluídas</button>
+      </div>
+
+      <!-- Lista de tarefas -->
+      <ul class="task-list" id="task-list">
+
+        <li class="task-item" data-status="pendente">
+          <label class="task-label">
+            <!-- ✅ TAG OBRIGATÓRIA: <input> -->
+            <input type="checkbox" onchange="toggleTarefa(this)" />
+            <span class="task-text">Estudar HTML e CSS</span>
+          </label>
+          <div class="task-actions">
+            <button class="btn-edit" onclick="editarTarefa(this)">✏️</button>
+            <button class="btn-delete" onclick="excluirTarefa(this)">🗑️</button>
+          </div>
+        </li>
+
+        <li class="task-item" data-status="pendente">
+          <label class="task-label">
+            <input type="checkbox" onchange="toggleTarefa(this)" />
+            <span class="task-text">Criar portfólio online</span>
+          </label>
+          <div class="task-actions">
+            <button class="btn-edit" onclick="editarTarefa(this)">✏️</button>
+            <button class="btn-delete" onclick="excluirTarefa(this)">🗑️</button>
+          </div>
+        </li>
+
+        <li class="task-item concluida" data-status="concluida">
+          <label class="task-label">
+            <input type="checkbox" checked onchange="toggleTarefa(this)" />
+            <span class="task-text">Aprender JavaScript</span>
+          </label>
+          <div class="task-actions">
+            <button class="btn-edit" onclick="editarTarefa(this)">✏️</button>
+            <button class="btn-delete" onclick="excluirTarefa(this)">🗑️</button>
+          </div>
+        </li>
+
+        <li class="task-item" data-status="pendente">
+          <label class="task-label">
+            <input type="checkbox" onchange="toggleTarefa(this)" />
+            <span class="task-text">Fazer exercícios físicos</span>
+          </label>
+          <div class="task-actions">
+            <button class="btn-edit" onclick="editarTarefa(this)">✏️</button>
+            <button class="btn-delete" onclick="excluirTarefa(this)">🗑️</button>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- Rodapé contador -->
+      <div class="task-footer">
+        <span id="contador">4 tarefas no total</span>
+        <button class="btn-clear" onclick="limparConcluidas()">🗑️ Limpar concluídas</button>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function adicionarTarefa() {
+      const input = document.getElementById('nova-tarefa');
+      const texto = input.value.trim();
+      if (!texto) return;
+
+      const lista = document.getElementById('task-list');
+      const li = document.createElement('li');
+      li.className = 'task-item';
+      li.dataset.status = 'pendente';
+      li.innerHTML = `
+        <label class="task-label">
+          <input type="checkbox" onchange="toggleTarefa(this)" />
+          <span class="task-text">${texto}</span>
+        </label>
+        <div class="task-actions">
+          <button class="btn-edit" onclick="editarTarefa(this)">✏️</button>
+          <button class="btn-delete" onclick="excluirTarefa(this)">🗑️</button>
+        </div>
+      `;
+      lista.appendChild(li);
+      input.value = '';
+      atualizarContador();
+    }
+
+    function toggleTarefa(checkbox) {
+      const item = checkbox.closest('.task-item');
+      const texto = item.querySelector('.task-text');
+      if (checkbox.checked) {
+        item.classList.add('concluida');
+        item.dataset.status = 'concluida';
+      } else {
+        item.classList.remove('concluida');
+        item.dataset.status = 'pendente';
+      }
+      atualizarContador();
+    }
+
+    function editarTarefa(btn) {
+      const item = btn.closest('.task-item');
+      const texto = item.querySelector('.task-text');
+      const novoTexto = prompt('Editar tarefa:', texto.textContent);
+      if (novoTexto !== null && novoTexto.trim() !== '') {
+        texto.textContent = novoTexto.trim();
+      }
+    }
+
+    function excluirTarefa(btn) {
+      btn.closest('.task-item').remove();
+      atualizarContador();
+    }
+
+    function limparConcluidas() {
+      document.querySelectorAll('.task-item.concluida').forEach(item => item.remove());
+      atualizarContador();
+    }
+
+    function filtrar(tipo, btn) {
+      document.querySelectorAll('.filtro').forEach(b => b.classList.remove('ativo'));
+      btn.classList.add('ativo');
+      document.querySelectorAll('.task-item').forEach(item => {
+        if (tipo === 'todas') item.style.display = 'flex';
+        else if (tipo === 'pendentes') item.style.display = item.dataset.status === 'pendente' ? 'flex' : 'none';
+        else if (tipo === 'concluidas') item.style.display = item.dataset.status === 'concluida' ? 'flex' : 'none';
+      });
+    }
+
+    function atualizarContador() {
+      const total = document.querySelectorAll('.task-item').length;
+      const concluidas = document.querySelectorAll('.task-item.concluida').length;
+      document.getElementById('contador').textContent =
+        `${total} tarefa${total !== 1 ? 's' : ''} — ${concluidas} concluída${concluidas !== 1 ? 's' : ''}`;
+    }
+
+    document.getElementById('nova-tarefa').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') adicionarTarefa();
+    });
+
+    atualizarContador();
+  </script>
+
+</body>
+</html>

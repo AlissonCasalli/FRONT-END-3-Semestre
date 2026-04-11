@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Botão Voltar -->
+  <a href="../exerc3/index.html" class="btn-voltar">← Voltar ao Portfólio</a>
+
+  <section class="hero">
+
+    <div class="login-wrapper">
+
+      <!-- Lado esquerdo decorativo -->
+      <div class="login-left">
+        <div class="left-content">
+          <span class="badge">✦ Bem-vindo de volta</span>
+          <h1>Acesse sua <span class="gradient-text">conta</span></h1>
+          <p>Entre com suas credenciais para acessar sua área exclusiva com segurança.</p>
+
+          <div class="features">
+            <div class="feature-item">
+              <span class="feature-icon">🔒</span>
+              <span>Conexão segura e criptografada</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">⚡</span>
+              <span>Acesso rápido ao seu painel</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🛡️</span>
+              <span>Seus dados sempre protegidos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado direito c/ formulário -->
+      <div class="login-right">
+        <div class="login-card">
+
+          <div class="login-header">
+            <div class="avatar">👤</div>
+            <h2>Entrar na conta</h2>
+            <p>Preencha seus dados abaixo</p>
+          </div>
+
+          <form action="#" method="POST">
+
+            <div class="form-group">
+              <label for="usuario">Usuário</label>
+              <!-- ✅ TAG OBRIGATÓRIA: <input> -->
+              <div class="input-wrapper">
+                <span class="input-icon">👤</span>
+                <input
+                  type="text"
+                  id="usuario"
+                  name="usuario"
+                  placeholder="Digite seu usuário"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="senha">Senha</label>
+              <div class="input-wrapper">
+                <span class="input-icon">🔑</span>
+                <!-- ✅ TAG OBRIGATÓRIA: <input> -->
+                <input
+                  type="password"
+                  id="senha"
+                  name="senha"
+                  placeholder="Digite sua senha"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox-label">
+                <input type="checkbox" name="lembrar" />
+                <span>Lembrar de mim</span>
+              </label>
+              <a href="#" class="forgot">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit" class="btn-submit">Entrar →</button>
+
+            <p class="register">Não tem uma conta? <a href="#">Cadastre-se grátis</a></p>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
