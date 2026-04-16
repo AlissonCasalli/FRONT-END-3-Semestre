@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --purple: #a78bfa;
+  --blue: #38bdf8;
+  --bg: #080b14;
+  --card: #0e1220;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e2e8f0;
+  --muted: rgba(255, 255, 255, 0.45);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,14 +17,19 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
-  background-color: #f4f3ef;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1rem;
+
+  padding-top: 100px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .page {
@@ -121,9 +138,23 @@ body {
   border-radius: 999px;
 }
 
-.tag-teal { background: rgba(29,158,117,0.2); color: #5DCAA5; border: 0.5px solid rgba(93,202,165,0.3); }
-.tag-blue { background: rgba(24,95,165,0.2);  color: #85B7EB; border: 0.5px solid rgba(133,183,235,0.3); }
-.tag-purp { background: rgba(83,74,183,0.2);  color: #AFA9EC; border: 0.5px solid rgba(175,169,236,0.3); }
+.tag-teal {
+  background: rgba(29, 158, 117, 0.2);
+  color: #5DCAA5;
+  border: 0.5px solid rgba(93, 202, 165, 0.3);
+}
+
+.tag-blue {
+  background: rgba(24, 95, 165, 0.2);
+  color: #85B7EB;
+  border: 0.5px solid rgba(133, 183, 235, 0.3);
+}
+
+.tag-purp {
+  background: rgba(83, 74, 183, 0.2);
+  color: #AFA9EC;
+  border: 0.5px solid rgba(175, 169, 236, 0.3);
+}
 
 .stats-side {
   display: grid;
@@ -174,7 +205,9 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
-.btn:hover { opacity: 0.85; }
+.btn:hover {
+  opacity: 0.85;
+}
 
 .btn-seguir {
   background-color: #1D9E75;
@@ -185,6 +218,26 @@ body {
   background-color: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.7);
   border: 0.5px solid rgba(255, 255, 255, 0.15);
+}
+
+header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+header p {
+  color: var(--muted);
+  font-weight: 500;
 }
 
 .main {
@@ -249,11 +302,24 @@ body {
   flex-shrink: 0;
 }
 
-.icon-green { background-color: #E1F5EE; color: #0F6E56; }
-.icon-purp  { background-color: #EEEDFE; color: #534AB7; }
-.icon-blue  { background-color: #E6F1FB; color: #185FA5; }
+.icon-green {
+  background-color: #E1F5EE;
+  color: #0F6E56;
+}
 
-.ativ-texto { flex: 1; }
+.icon-purp {
+  background-color: #EEEDFE;
+  color: #534AB7;
+}
+
+.icon-blue {
+  background-color: #E6F1FB;
+  color: #185FA5;
+}
+
+.ativ-texto {
+  flex: 1;
+}
 
 .ativ-titulo {
   font-size: 13px;
@@ -318,9 +384,13 @@ body {
     height: 88px;
   }
 
-  .nome { font-size: 18px; }
+  .nome {
+    font-size: 18px;
+  }
 
-  .main { padding: 1.5rem; }
+  .main {
+    padding: 1.5rem;
+  }
 
   .fotos-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -337,23 +407,38 @@ body {
 }
 
 @media (max-width: 400px) {
-  body { padding: 0.5rem; }
+  body {
+    padding: 0.5rem;
+  }
 
-  .page { border-radius: 16px; }
+  .page {
+    border-radius: 16px;
+  }
 
   .avatar-wrap img {
     width: 76px;
     height: 76px;
   }
 
-  .nome   { font-size: 16px; }
-  .cargo  { font-size: 10px; }
+  .nome {
+    font-size: 16px;
+  }
 
-  .fotos-grid { gap: 4px; }
+  .cargo {
+    font-size: 10px;
+  }
 
-  .fotos-grid img { border-radius: 6px; }
+  .fotos-grid {
+    gap: 4px;
+  }
 
-  .ativ-item  { padding: 0.6rem 0.75rem; }
+  .fotos-grid img {
+    border-radius: 6px;
+  }
+
+  .ativ-item {
+    padding: 0.6rem 0.75rem;
+  }
 
   .btn {
     font-size: 12px;
@@ -362,7 +447,9 @@ body {
 }
 
 @media (min-width: 1024px) {
-  body { padding: 2rem; }
+  body {
+    padding: 2rem;
+  }
 
   .page {
     max-width: 1000px;
@@ -374,8 +461,13 @@ body {
     height: 120px;
   }
 
-  .nome      { font-size: 22px; }
-  .stat-num  { font-size: 20px; }
+  .nome {
+    font-size: 22px;
+  }
+
+  .stat-num {
+    font-size: 20px;
+  }
 
   .fotos-grid {
     grid-template-columns: repeat(4, 1fr);
