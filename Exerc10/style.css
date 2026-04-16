@@ -153,8 +153,8 @@ blockquote {
 blockquote::before {
     content: '"';
     position: absolute;
-    top: -25px;
-    left: 25px;
+    top: -40px;
+    left: -30px;
     font-size: 5rem;
     color: var(--purple);
     opacity: 0.2;
