@@ -188,7 +188,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* ✅ TAG OBRIGATÓRIA: <time> estilizada */
+/*  TAG OBRIGATÓRIA: <time>  */
 time.time-block {
   display: flex;
   flex-direction: column;
