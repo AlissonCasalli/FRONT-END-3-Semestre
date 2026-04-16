@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- ✅ Botão Voltar -->
     <a href="../exerc3/index.html" class="btn-voltar">← Voltar ao Portfólio</a>
 
-    <div class="container">
+    <header>
         <h1>Galeria de Fotos</h1>
+        <p>Exercício 12 • <strong>&lt;figure&gt;</strong> + <strong>display</strong></p>
+    </header>
+
+    <div class="container">
         <div class="gallery">
             <figure onclick="openModal('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800')">
                 <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Natureza">
                 <figcaption>Montanha ao Amanhecer</figcaption>
             </figure>
-            <figure onclick="openModal('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800')">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400" alt="Cidade">
+
+            <figure onclick="openModal('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800')">
+                <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400" alt="Cidade">>
                 <figcaption>Cidade Futurista</figcaption>
             </figure>
-            <figure onclick="openModal('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800')">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400" alt="Mar">
+
+            <figure onclick="openModal('https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800')">
+                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400 alt=" Mar">>
                 <figcaption>Oceano Azul</figcaption>
             </figure>
-            <figure onclick="openModal('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800')">
-                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400" alt="Pôr do sol">
-                <figcaption>Pôr do Sol na Praia</figcaption>
+
+            <figure onclick="openModal('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800')">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400" alt="Praia">
+                <figcaption>Pôr do sol na praia</figcaption>
             </figure>
-            <figure onclick="openModal('https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800')">
-                <img src="https://i.blogs.es/f1e93d/gettyimages-2210544624/500_333.jpeg" alt="Galáxia">
-                <figcaption>Galáxia Espiral</figcaption>
+
+            <figure onclick="openModal('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800')">
+                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400" alt="Espaço">
+                <figcaption>Espaço Profundo</figcaption>
             </figure>
-            <figure onclick="openModal('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800')">
-                <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400" alt="Floresta">
-                <figcaption>Floresta Mística</figcaption>
+
+            <figure onclick="openModal('https://images.unsplash.com/photo-1448375240586-882707db888b?w=800')">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=400" alt="Floresta">
+                <figcaption>Floresta Misteriosa</figcaption>
             </figure>
+
         </div>
     </div>
 
@@ -57,10 +68,11 @@
             document.getElementById('imageModal').style.display = 'none';
         }
 
-        document.getElementById('imageModal').addEventListener('click', function(e) {
+        document.getElementById('imageModal').addEventListener('click', function (e) {
             if (e.target === this) closeModal();
         });
     </script>
 
 </body>
+
 </html>
