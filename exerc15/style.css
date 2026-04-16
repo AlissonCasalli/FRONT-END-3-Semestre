@@ -1,4 +1,4 @@
-/* ── Reset ── */
+/*  Reset  */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -30,11 +30,9 @@ body {
   background-clip: text;
 }
 
-/* ══════════════════════════════
-   ✅ ANIMAÇÕES OBRIGATÓRIAS
-══════════════════════════════ */
+/* ANIMAÇÕES OBRIGATÓRIAS */
 
-/* Pulsa o badge "Em breve" */
+/* Pulsa o "Em breve" */
 @keyframes pulse-badge {
   0%, 100% { box-shadow: 0 0 0 0 rgba(167,139,250,0.5); }
   50%       { box-shadow: 0 0 0 10px rgba(167,139,250,0); }
@@ -59,7 +57,7 @@ body {
   66%       { transform: translate(-20px, 20px) scale(0.95); }
 }
 
-/* ✅ PROPRIEDADE OBRIGATÓRIA: animation — pisca o bloco de segundos */
+/* OBRIGATÓRIA: animation pisca o bloco de segundos */
 @keyframes blink-time {
   0%   { opacity: 1;    transform: scale(1); }
   40%  { opacity: 0.6;  transform: scale(0.96); }
@@ -78,7 +76,7 @@ body {
   100% { background-position:  200% center; }
 }
 
-/* ══ HERO ══ */
+/*  HERO  */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -146,7 +144,7 @@ body {
   background: rgba(167,139,250,0.08);
 }
 
-/* ✅ PROPRIEDADE OBRIGATÓRIA: animation */
+/* animation */
 .badge.pulse {
   animation: pulse-badge 2.5s ease-in-out infinite;
 }
@@ -304,7 +302,7 @@ time.time-block.blink {
     0 0 60px rgba(167,139,250,0.15);
 }
 
-/* ══ FEATURES ══ */
+/*  FEATURES  */
 .features {
   padding: 6rem 6vw;
   display: flex;
@@ -373,7 +371,7 @@ time.time-block.blink {
   line-height: 1.7;
 }
 
-/* ══ GALERIA ══ */
+/*  GALERIA  */
 .gallery {
   padding: 4rem 6vw 6rem;
   display: flex;
@@ -404,7 +402,7 @@ time.time-block.blink {
   box-shadow: 0 12px 40px rgba(167,139,250,0.12);
 }
 
-/* ══ PRÉ-VENDA ══ */
+/*  PRÉ-VENDA  */
 .pre-venda {
   padding: 6rem 6vw;
   background:
@@ -492,7 +490,7 @@ time.time-block.blink {
   color: var(--green);
 }
 
-/* ── Formulário pré-venda ── */
+/*  Formulário pré-venda  */
 .pre-venda-form {
   flex: 0 0 420px;
   background: var(--card);
@@ -574,7 +572,7 @@ time.time-block.blink {
   text-align: center;
 }
 
-/* ── Botão Voltar ── */
+/*  Botão Voltar  */
 .btn-voltar {
   position: fixed;
   top: 1.25rem;
@@ -603,7 +601,7 @@ time.time-block.blink {
   transform: translateX(-3px);
 }
 
-/* ══ RESPONSIVIDADE ══ */
+/*  RESPONSIVIDADE  */
 @media (max-width: 1024px) {
   .hero          { flex-direction: column; text-align: center; padding-top: 8rem; }
   .hero-content  { max-width: 100%; align-items: center; display: flex; flex-direction: column; }

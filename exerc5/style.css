@@ -22,7 +22,7 @@ body {
   min-height: 100vh;
 }
 
-/* ── Gradiente reutilizável ── */
+/*  Gradiente reutilizável  */
 .gradient-text {
   background: linear-gradient(90deg, var(--purple), var(--blue));
   -webkit-background-clip: text;
@@ -217,7 +217,7 @@ textarea:focus {
   transform: translateY(-2px);
 }
 
-/* ── Botão Voltar ── */
+/*  Botão Voltar  */
 .btn-voltar {
   position: fixed;
   top: 1.25rem;
